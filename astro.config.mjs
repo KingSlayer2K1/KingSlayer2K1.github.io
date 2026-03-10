@@ -12,7 +12,11 @@ import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
+<<<<<<< HEAD
   site: "https://KingSlayer2K1.github.io",
+=======
+  site: "https://kingslayer2k1.github.io",
+>>>>>>> 23e7125774b5663cb5eef2306ca9f08bdab19974
   integrations: [
     sitemap(),
     robotsTxt({
