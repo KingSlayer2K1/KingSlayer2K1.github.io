@@ -5,18 +5,7 @@ import worldData from "../lib/world.json";
 const GlobeComponent = () => {
   let mapContainer: HTMLDivElement | undefined;
 
-  const visitedCountries = [
-    "France",
-    "China",
-    "Italy",
-    "Sri Lanka",
-    "Turkey",
-    "Greece",
-    "Malta",
-    "Hungary",
-    "Portugal",
-    "Marocco",
-  ];
+  const focusCountries = ["India"];
 
   onMount(() => {
     if (!mapContainer) return;
@@ -61,7 +50,7 @@ const GlobeComponent = () => {
       .append("path")
       .attr("d", (d: any) => pathGenerator(d as any))
       .attr("fill", (d: { properties: { name: string } }) =>
-        visitedCountries.includes(d.properties.name) ? "#E63946" : "white"
+        focusCountries.includes(d.properties.name) ? "#E63946" : "white"
       )
       .style("stroke", "black")
       .style("stroke-width", 0.3)

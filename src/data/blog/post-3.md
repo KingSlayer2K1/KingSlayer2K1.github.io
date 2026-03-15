@@ -1,18 +1,25 @@
----
-title: "Hello, World"
-description: "this is a post example"
-pubDate: 2023-01-21
-category: "intro"
+﻿---
+title: "Authentication Flows: Where Real Vulnerabilities Hide"
+description: "Practical lessons from analyzing session and credential handling in a live ERP workflow."
+pubDate: 2026-03-05
+category: "appsec"
 draft: false
 ---
 
-# Hi there!
+# Most auth bugs are workflow bugs
 
-This Markdown file creates a page at `your-domain.com/blog/post1/`
+In security testing, I have seen that authentication issues are often not cryptography problems.
+They are usually routing, storage, or session lifecycle problems.
 
-It probably isn't styled much, but Markdown does support:
+## My flow for auth reviews
 
-- **bold** and _italics._
-- lists
-- [links](https://astro.build)
-- and more!
+- Map login and session creation end-to-end.
+- Inspect request and response boundaries in Burp Suite.
+- Check for exposed backend paths and weak data handling.
+- Propose fixes that teams can apply incrementally.
+
+## Principle I follow
+
+Security findings are useful only when they are reproducible and actionable.
+
+I try to deliver each finding with clear proof and a practical remediation path.
