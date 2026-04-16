@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ayush Dutt — Developer & Security Enthusiast</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 /* ─── Reset & Base ───────────────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -17,6 +17,7 @@
   --glow-g:0 0 20px rgba(0,255,136,.35),0 0 60px rgba(0,255,136,.12);
   --glow-c:0 0 20px rgba(0,212,255,.35),0 0 60px rgba(0,212,255,.12);
   --font:'Space Grotesk',sans-serif;
+  --heading:'Sora','Space Grotesk',sans-serif;
   --mono:'JetBrains Mono',monospace;
 }
 html{scroll-behavior:smooth;overflow-x:hidden}
@@ -146,8 +147,9 @@ h1.glitch::after{color:var(--pink);clip-path:polygon(0 60%,100% 60%,100% 75%,0 7
   letter-spacing:.15em;margin-bottom:12px;display:flex;align-items:center;gap:10px}
 .section-label::after{content:'';flex:1;height:1px;background:var(--border);max-width:60px}
 .section-title{font-size:clamp(28px,4vw,42px);font-weight:700;
-  letter-spacing:-.02em;margin-bottom:50px;line-height:1.1}
-.section-title span{color:transparent;-webkit-text-stroke:1px var(--border)}
+  font-family:var(--heading);letter-spacing:-.015em;margin-bottom:50px;line-height:1.1}
+.section-title span{color:#d8f6ff;-webkit-text-stroke:0;
+  text-shadow:0 0 18px rgba(0,212,255,.2),0 0 2px rgba(0,212,255,.35)}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
